@@ -6,6 +6,7 @@ require (
 	github.com/asim/go-micro/plugins/client/http/v3 v3.0.0-20210403073940-e7a7e3a05092
 	github.com/asim/go-micro/plugins/config/encoder/toml/v3 v3.0.0-20210403073940-e7a7e3a05092
 	github.com/asim/go-micro/plugins/config/source/grpc/v3 v3.0.0-20210403073940-e7a7e3a05092
+	github.com/asim/go-micro/plugins/registry/consul/v3 v3.0.0-20210726052521-c3107e6843e2
 	github.com/asim/go-micro/plugins/server/http/v3 v3.0.0-20210403073940-e7a7e3a05092
 	github.com/asim/go-micro/plugins/wrapper/select/roundrobin/v3 v3.0.0-20210403073940-e7a7e3a05092
 	github.com/asim/go-micro/plugins/wrapper/select/shard/v3 v3.0.0-20210403073940-e7a7e3a05092
@@ -26,6 +27,8 @@ replace github.com/asim/go-micro/plugins/client/http/v3 => ../../go-micro/plugin
 replace github.com/asim/go-micro/plugins/config/encoder/toml/v3 => ../../go-micro/plugins/config/encoder/toml
 
 replace github.com/asim/go-micro/plugins/config/source/grpc/v3 => ../../go-micro/plugins/config/source/grpc
+
+replace github.com/asim/go-micro/plugins/registry/consul/v3 => ../../go-micro/plugins/registry/consul
 
 replace github.com/asim/go-micro/plugins/server/http/v3 => ../../go-micro/plugins/server/http
 

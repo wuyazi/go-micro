@@ -5,6 +5,7 @@ import (
 	"log"
 
 	pb "github.com/asim/go-micro/examples/v3/helloworld/proto"
+	_ "github.com/asim/go-micro/plugins/registry/consul/v3"
 	"github.com/asim/go-micro/v3"
 )
 
