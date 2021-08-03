@@ -4,13 +4,14 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"net"
 	"net/http"
 	"testing"
 	"time"
 
-	consul "github.com/hashicorp/consul/api"
 	"github.com/asim/go-micro/v3/registry"
+	consul "github.com/hashicorp/consul/api"
 )
 
 type mockRegistry struct {
@@ -63,7 +64,8 @@ func newConsulTestRegistry(r *mockRegistry) (*consulRegistry, func()) {
 			AllowStale: true,
 		},
 	}
-	cr.Client()
+	c := cr.Client()
+	fmt.Println(c)
 
 	return cr, func() {
 		l.Close()
@@ -82,9 +84,11 @@ func TestConsul_GetService_WithError(t *testing.T) {
 	})
 	defer cl()
 
-	if _, err := cr.GetService("test-service"); err == nil {
+	svc, err := cr.GetService("test-service")
+	if  err == nil {
 		t.Fatalf("Expected error not to be `nil`")
 	}
+	fmt.Println(svc)
 }
 
 func TestConsul_GetService_WithHealthyServiceNodes(t *testing.T) {
