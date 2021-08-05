@@ -7,10 +7,10 @@ import (
 	"time"
 
 	"github.com/asim/go-micro/v3/client"
-	"github.com/asim/go-micro/v3/selector"
 	"github.com/asim/go-micro/v3/cmd"
 	"github.com/asim/go-micro/v3/metadata"
 	"github.com/asim/go-micro/v3/registry"
+	"github.com/asim/go-micro/v3/selector"
 
 	example "github.com/asim/go-micro/examples/v3/server/proto/example"
 )

@@ -8,9 +8,9 @@ import (
 	"time"
 
 	"github.com/asim/go-micro/v3/client"
-	"github.com/asim/go-micro/v3/selector"
 	"github.com/asim/go-micro/v3/cmd"
 	"github.com/asim/go-micro/v3/registry"
+	"github.com/asim/go-micro/v3/selector"
 
 	example "github.com/asim/go-micro/examples/v3/server/proto/example"
 )
@@ -91,7 +91,7 @@ func (n *dcSelector) String() string {
 	return "dc"
 }
 
-// Return a new first node selector
+// DCSelector Return a new first node selector
 func DCSelector(opts ...selector.Option) selector.Selector {
 	var sopts selector.Options
 	for _, opt := range opts {

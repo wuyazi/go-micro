@@ -8,9 +8,9 @@ import (
 
 	example "github.com/asim/go-micro/examples/v3/server/proto/example"
 	"github.com/asim/go-micro/v3/client"
-	"github.com/asim/go-micro/v3/selector"
 	"github.com/asim/go-micro/v3/cmd"
 	"github.com/asim/go-micro/v3/registry"
+	"github.com/asim/go-micro/v3/selector"
 )
 
 func init() {
@@ -81,7 +81,7 @@ func (n *firstNodeSelector) String() string {
 	return "first"
 }
 
-// Return a new first node selector
+// FirstNodeSelector Return a new first node selector
 func FirstNodeSelector(opts ...selector.Option) selector.Selector {
 	var sopts selector.Options
 	for _, opt := range opts {
