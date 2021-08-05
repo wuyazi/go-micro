@@ -22,7 +22,7 @@ func main() {
 		micro.Name("go.micro.srv.greeter"),
 		micro.RegisterTTL(time.Second*30),
 		micro.RegisterInterval(time.Second*10),
-		// setup a new transport with secure option
+		// setup new transport with secure option
 		micro.Transport(
 			// create new transport
 			transport.NewHTTPTransport(
