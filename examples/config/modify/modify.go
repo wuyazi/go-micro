@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/asim/go-micro/v3/config"
 	"github.com/asim/go-micro/plugins/config/encoder/toml/v3"
+	"github.com/asim/go-micro/v3/config"
 	"github.com/asim/go-micro/v3/config/source"
 	"github.com/asim/go-micro/v3/config/source/file"
 )
