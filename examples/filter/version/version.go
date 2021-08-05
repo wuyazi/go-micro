@@ -3,8 +3,8 @@ package version
 
 import (
 	"github.com/asim/go-micro/v3/client"
-	"github.com/asim/go-micro/v3/selector"
 	"github.com/asim/go-micro/v3/registry"
+	"github.com/asim/go-micro/v3/selector"
 )
 
 // Filter will filter the version of the service

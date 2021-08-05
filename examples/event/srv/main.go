@@ -8,10 +8,10 @@ import (
 	"github.com/asim/go-micro/v3/util/log"
 )
 
-// All methods of Event will be executed when a message is received
+// Event All methods of Event will be executed when a message is received
 type Event struct{}
 
-// Method can be of any name
+// Process Method can be of any name
 func (e *Event) Process(ctx context.Context, event *proto.Event) error {
 	log.Logf("Received event %+v\n", event)
 	// do something with event
