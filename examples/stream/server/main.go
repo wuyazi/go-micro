@@ -6,13 +6,13 @@ import (
 	"io"
 	"log"
 
-	proto "github.com/asim/go-micro/examples/v3/stream/server/proto"
+	"github.com/asim/go-micro/examples/v3/stream/server/proto"
 	"github.com/asim/go-micro/v3"
 )
 
 type Streamer struct{}
 
-// Server side stream
+// ServerStream Server side stream
 func (e *Streamer) ServerStream(ctx context.Context, req *proto.Request, stream proto.Streamer_ServerStreamStream) error {
 	fmt.Printf("ServerStream Got msg %v\n", req.Count)
 	for i := 0; i < int(req.Count); i++ {
@@ -24,7 +24,7 @@ func (e *Streamer) ServerStream(ctx context.Context, req *proto.Request, stream 
 	return nil
 }
 
-// Bidirectional stream
+// Stream Bidirectional stream
 func (e *Streamer) Stream(ctx context.Context, stream proto.Streamer_StreamStream) error {
 	fmt.Println("Stream")
 	for {

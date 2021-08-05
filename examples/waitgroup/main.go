@@ -9,8 +9,8 @@ import (
 	"github.com/asim/go-micro/v3/server"
 )
 
-// waitgroup is a handler wrapper which adds a handler to a sync.WaitGroup
-func waitgroup(wg *sync.WaitGroup) server.HandlerWrapper {
+// waitGroup is a handler wrapper which adds a handler to a sync.WaitGroup
+func waitGroup(wg *sync.WaitGroup) server.HandlerWrapper {
 	return func(h server.HandlerFunc) server.HandlerFunc {
 		return func(ctx context.Context, req server.Request, rsp interface{}) error {
 			wg.Add(1)
@@ -24,9 +24,9 @@ func main() {
 	var wg sync.WaitGroup
 
 	service := micro.NewService(
-		// wrap handlers with waitgroup wrapper
-		micro.WrapHandler(waitgroup(&wg)),
-		// waits for the waitgroup once stopped
+		// wrap handlers with waitGroup wrapper
+		micro.WrapHandler(waitGroup(&wg)),
+		// waits for the waitGroup once stopped
 		micro.AfterStop(func() error {
 			// wait for handlers to finish
 			wg.Wait()

@@ -1,5 +1,9 @@
 syntax = "proto3";
 
+package proto;
+
+option go_package = "../proto";
+
 // Example message
 message Event {
 	// unique id

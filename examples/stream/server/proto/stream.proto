@@ -1,5 +1,9 @@
 syntax = "proto3";
 
+package proto;
+
+option go_package = "../proto";
+
 service Streamer {
 	rpc Stream(stream Request) returns (stream Response) {}
 	rpc ServerStream(Request) returns (stream Response) {}

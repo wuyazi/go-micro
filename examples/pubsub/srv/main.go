@@ -10,11 +10,11 @@ import (
 	"context"
 )
 
-// All methods of Sub will be executed when
+// Sub All methods of Sub will be executed when
 // a message is received
 type Sub struct{}
 
-// Method can be of any name
+// Process Method can be of any name
 func (s *Sub) Process(ctx context.Context, event *proto.Event) error {
 	md, _ := metadata.FromContext(ctx)
 	log.Logf("[pubsub.1] Received event %+v with metadata %+v\n", event, md)
