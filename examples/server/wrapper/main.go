@@ -6,6 +6,7 @@ import (
 	"context"
 	"github.com/asim/go-micro/examples/v3/server/handler"
 	"github.com/asim/go-micro/examples/v3/server/subscriber"
+	_ "github.com/asim/go-micro/plugins/registry/consul/v3"
 	"github.com/asim/go-micro/v3/cmd"
 	"github.com/asim/go-micro/v3/server"
 )

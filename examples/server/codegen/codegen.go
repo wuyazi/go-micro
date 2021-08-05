@@ -8,7 +8,7 @@ import (
 	"github.com/asim/go-micro/v3/cmd"
 	"github.com/asim/go-micro/v3/server"
 
-	example "github.com/asim/go-micro/examples/v3/server/proto/example"
+	"github.com/asim/go-micro/examples/v3/server/proto/example"
 )
 
 type Example struct{}
