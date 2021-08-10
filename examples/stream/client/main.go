@@ -57,7 +57,7 @@ func serverStream(cl proto.StreamerService) {
 			break
 		}
 		i++
-		fmt.Printf("got msg %v\n", rsp.Count)
+		fmt.Printf("got msg count: %v, i: %d, data: %v\n", rsp.Count, i, rsp)
 	}
 
 	if i < 10 {
