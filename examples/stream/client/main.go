@@ -1,12 +1,12 @@
 package main
 
 import (
-	"fmt"
-	"time"
-
 	"context"
+	"fmt"
 	"github.com/asim/go-micro/examples/v3/stream/server/proto"
+	_ "github.com/asim/go-micro/plugins/registry/consul/v3"
 	"github.com/asim/go-micro/v3"
+	"time"
 )
 
 func bidirectional(cl proto.StreamerService) {

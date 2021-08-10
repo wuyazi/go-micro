@@ -3,11 +3,11 @@ package main
 import (
 	"context"
 	"fmt"
+	"github.com/asim/go-micro/examples/v3/stream/server/proto"
+	_ "github.com/asim/go-micro/plugins/registry/consul/v3"
+	"github.com/asim/go-micro/v3"
 	"io"
 	"log"
-
-	"github.com/asim/go-micro/examples/v3/stream/server/proto"
-	"github.com/asim/go-micro/v3"
 )
 
 type Streamer struct{}
